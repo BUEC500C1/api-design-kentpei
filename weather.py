@@ -13,7 +13,7 @@ def getinfo1(x,y):
     return ("weather:" + str(weather) + "  "  +  "temperatue:" + str(temp) + "  "  + "minimum temperature:" +
             str(mintemp) + "  "  + "maximum temperature:" + str(maxtemp))
 def getinfo2(city):
-    url = "http://api.openweathermap.org/data/2.5/weather?" + "q=" + city + "&APPID=9(your key's here)"
+    url = "http://api.openweathermap.org/data/2.5/weather?" + "q=" + city + "&APPID=(your key's here)"
     content = requests.get(url).content
     new = content.decode("utf-8")
     content_json = json.loads(new)
